@@ -1,24 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+import { Route, Routes } from 'react-router-dom';
 
-function App() {
+import Menu from './components/Navigation/Menu/Menu';
+import Background from './components/Navigation/Background/Background';
+import SideMenu from './components/Navigation/SideMenu/SideMenu';
+import Footer from "./components/Footer";
+import Featured from "./components/Featured";
+import Hero from "./components/Hero";
+import Signup from "./components/Signup";
+
+import Coins from './components/Coins';
+import Navbar from './components/Navbar';
+import Coin from './components/routes/Coin';
+import './index.css'
+
+const App = () => {
+
+  const [sideMenuOpen, setMenuState] = useState(false);
+
+  const menuToggleClickHandler = () => {
+    setMenuState(!sideMenuOpen)
+  };
+
+  const backStateClickHandler = () => {
+    setMenuState(false)
+  }
+
+  const [coins, setCoins] = useState([]);
+
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false`
+
+  useEffect(() => {
+    axios.get(url).then((response) => {
+      setCoins(response.data)
+    }).catch((error) => {
+      console.log(error);
+    })
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Menu clickHandler={menuToggleClickHandler} />
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Coins coins={coins} />} />
+        <Route path='/coin' element={<Coin />}>
+          <Route path=':coinId' element={<Coin />} />
+        </Route>
+        <Route path='/featured' element={<Featured />} />
+        <Route path='/hero' element={<Hero />} />
+        <Route path='/featured' element={<Featured />} />
+        <Route path='/signup' element={<Signup />} />
+      </Routes>
+
+      {sideMenuOpen ? <Background click={backStateClickHandler} /> : ''}
+
+      <SideMenu show={sideMenuOpen} remove={backStateClickHandler} />
+
+      <Footer />
+
+    </>
   );
 }
 
