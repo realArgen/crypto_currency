@@ -56,12 +56,12 @@ body.active-modal {
     position: absolute;
     top: 10px;
     right: 10px;
-    padding: 12px 28px;
+    padding: 9px 20px;
     border: 1px solid var(--primary);
     background-color: var(--primary);
     color: #fff;
     border-radius: 24px 4px;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 600;
     cursor: pointer;
     z-index: 7000;
@@ -77,6 +77,23 @@ body.active-modal {
     margin-bottom: 15px;
 }
 
+.modal .form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.modal .form-container input {
+    padding: .7rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+}
+
+.modal .form-container input[type='checkbox'] {
+    margin-right: .5rem;
+}
 
 @media screen and (max-width: 759px) {
     .modal-container{

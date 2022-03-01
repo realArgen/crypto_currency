@@ -28,19 +28,15 @@ export default function Modal() {
                         <p class="modal__description">
                             Log in
                         </p>
-                        <form action="" class="modal__form">
-                            <label for="">
-                                <input type="text" class="modal__form-input" placeholder="Your name" />
-                            </label>
-                            <label for="">
-                                <input type="tel" class="modal__form-input" placeholder="Your phone number" />
-                            </label>
-                            <label for="">
-                                <input type="email" class="modal__form-input" placeholder="Your E-mail" />
-                            </label>
-                            <button class="modal__form-btn btn">
-                                Login
-                            </button>
+
+                        <form action="https://getform.io/f/458bc1bd-10f4-43ee-960d-1295b3543fdf" method="POST">
+                            <div className="form-container">
+                                <input type="email" name='email' placeholder='Enter your email' />
+                                <button className="btn">Sign Up</button>
+                            </div>
+                            <div className="form-container">
+                                <input type="checkbox" /> <p>Yes, I agree to receive emails from Crypto.</p>
+                            </div>
                         </form>
                         <button className="close-modal" onClick={toggleModal}>
                             CLOSE
