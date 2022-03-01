@@ -1,7 +1,6 @@
 import React from 'react';
-import Crypto from '../assets/hero-img.png';
+import Crypto from '../../assets/hero-img.png';
 import styled from 'styled-components';
-import Modal from './Modal/Modal';
 
 const Styles = styled.div`
 .hero{
@@ -99,7 +98,6 @@ const Hero = () => {
                         <h1>Invest in Cryptocurreny with Your IRA</h1>
                         <p>Buy, Sell, and store hundreds of cryptocurrencies</p>
                         <div className='input-container'>
-                            {/* <input type='email' placeholder='Enter your email' /> */}
                             <form action="https://getform.io/f/458bc1bd-10f4-43ee-960d-1295b3543fdf" method="POST">
                                 <input type="email" name='email' placeholder='Enter your email' />
                                 <button type='submit' className="btn">Sign Up</button>
@@ -107,12 +105,6 @@ const Hero = () => {
                                     <label><input type="checkbox" /> <p>Yes, I agree to receive emails from Crypto.</p></label>
                                 </div>
                             </form>
-                            {/* <div className="modal-container"> */}
-                            {/* <Modal /> */}
-                            {/* <button className="btn-modal">
-                                    Sign Up
-                                </button> */}
-                            {/* </div> */}
                         </div>
                     </div>
                     {/* Right Side */}

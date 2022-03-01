@@ -5,13 +5,12 @@ import { Route, Routes } from 'react-router-dom';
 import Menu from './components/Navigation/Menu/Menu';
 import Background from './components/Navigation/Background/Background';
 import SideMenu from './components/Navigation/SideMenu/SideMenu';
-import Footer from "./components/Footer";
-import Featured from "./components/Featured";
-import Hero from "./components/Hero";
-import Signup from "./components/Signup";
+import Footer from "./components/Footer/Footer";
+import Featured from "./components/Featured/Featured";
+import Hero from "./components/Hero/Hero";
+import Signup from "./components/Signup/Signup";
 
-import Coins from './components/Coins';
-import Navbar from './components/Navbar';
+import Coins from './components/Coins/Coins';
 import Coin from './components/routes/Coin';
 import './index.css'
 
@@ -42,7 +41,6 @@ const App = () => {
   return (
     <>
       <Menu clickHandler={menuToggleClickHandler} />
-      <Navbar />
       <Routes>
         <Route path='/' element={<Coins coins={coins} />} />
         <Route path='/coin' element={<Coin />}>

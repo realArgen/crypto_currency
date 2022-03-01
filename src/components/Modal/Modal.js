@@ -31,11 +31,11 @@ export default function Modal() {
 
                         <form action="https://getform.io/f/458bc1bd-10f4-43ee-960d-1295b3543fdf" method="POST">
                             <div className="form-container">
-                                <input type="email" name='email' placeholder='Enter your email' />
+                                <input type="email" name='email' placeholder='Enter your email' className="modal__input-email" />
                                 <button className="btn">Sign Up</button>
                             </div>
                             <div className="form-container">
-                                <input type="checkbox" /> <p>Yes, I agree to receive emails from Crypto.</p>
+                                <label><input type="checkbox" /> <p>Yes, I agree to receive emails from Crypto.</p></label>
                             </div>
                         </form>
                         <button className="close-modal" onClick={toggleModal}>

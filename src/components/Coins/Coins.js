@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Coin from './routes/Coin';
-import Coinitem from './Coinitem';
-import './Coins.css';
+import Coin from '../routes/Coin';
+import Coinitem from '../Coinitem/Coinitem';
+import '../Coins/Coins.css';
 
 
 const Coins = (props) => {
     return (
 
-        <div className='container'>
+        <div className='container mt-80'>
             <div>
                 <div className="heading">
                     <p>#</p>

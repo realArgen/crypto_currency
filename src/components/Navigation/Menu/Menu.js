@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCoins } from 'react-icons/fa';
 import './Menu.css';
 import MainButton from '../MainButton/MainButton';
 import { Link } from 'react-router-dom';
@@ -10,7 +11,9 @@ const Menu = prop => {
             <header className="menu">
                 <nav className="menu__navigation">
 
-                    <div className="menu__title"><a href="/">Crypto</a></div>
+                    <div className="menu__title">
+                        <a href="/">Crypto<FaCoins className='icon' /></a>
+                    </div>
                     <ul className="menu__ul">
 
 

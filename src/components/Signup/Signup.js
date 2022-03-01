@@ -1,7 +1,7 @@
 import React from 'react';
-import Crypto from '../assets/trade.png';
+import Crypto from '../../assets/trade.png';
 import styled from 'styled-components';
-import Modal from './Modal/Modal';
+import Modal from '../Modal/Modal';
 
 const Styles = styled.div`
 .signup .container {
