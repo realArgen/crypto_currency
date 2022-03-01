@@ -30,19 +30,17 @@
     flex: 1;
 }
 
-.menu__title a{
-    margin-left: 1rem;
-    display: flex;
-    align-items: center;
-    column-gap: 5px;
-}
 
-.menu__title a {
+.menu__title  {
     color: rgb(209, 219, 68);
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 700;
     font-style: italic;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
 }
 
 .menu__navigation-items a {

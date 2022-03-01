@@ -11,9 +11,11 @@ const Menu = prop => {
             <header className="menu">
                 <nav className="menu__navigation">
 
-                    <div className="menu__title">
-                        <a href="/">Crypto<FaCoins className='icon' /></a>
-                    </div>
+                    <Link to='/'>
+                        <div className="menu__title">
+                            Crypto<FaCoins className='icon' />
+                        </div>
+                    </Link>
                     <ul className="menu__ul">
 
 
