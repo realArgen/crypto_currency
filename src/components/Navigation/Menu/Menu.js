@@ -18,7 +18,6 @@ const Menu = prop => {
                     </Link>
                     <ul className="menu__ul">
 
-
                         <li>
                             <Link to='/' className='nav-item' onClick={prop.remove}>Home</Link>
                         </li>

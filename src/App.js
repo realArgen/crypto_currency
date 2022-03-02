@@ -12,7 +12,7 @@ import Signup from "./components/Signup/Signup";
 
 import Coins from './components/Coins/Coins';
 import Coin from './components/routes/Coin';
-import './index.css'
+import './index.css';
 
 const App = () => {
 

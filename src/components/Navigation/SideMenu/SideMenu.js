@@ -13,8 +13,6 @@ const SideMenu = prop => {
         <div>
             <nav className={sideMenuClass}>
                 <ul className="sideMenu__ul">
-
-
                     <li>
                         <Link to='/' className='nav-item' onClick={prop.remove}>Home</Link>
                     </li>
@@ -23,13 +21,11 @@ const SideMenu = prop => {
                     </li>
                     <li>
                         <Link to='/hero' className='nav-item' onClick={prop.remove}>Earn</Link>
-
                     </li>
                     <li>
                         <Link to='/signup' className='nav-item' onClick={prop.remove}>Signup</Link>
                     </li>
                 </ul>
-
             </nav>
         </div>
     )
