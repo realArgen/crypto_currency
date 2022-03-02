@@ -6,10 +6,10 @@ import './Coin.css'
 
 const Coin = () => {
 
-    const params = useParams()
-    const [coin, setCoin] = useState({})
+    const params = useParams();
+    const [coin, setCoin] = useState({});
 
-    const url = `https://api.coingecko.com/api/v3/coins/${params.coinId}`
+    const url = `https://api.coingecko.com/api/v3/coins/${params.coinId}`;
 
 
     useEffect(() => {
@@ -20,7 +20,6 @@ const Coin = () => {
         })
     }, [])
 
-    console.log(coin);
 
     return (
         <div>
@@ -80,7 +79,7 @@ const Coin = () => {
                             <div className='row'>
                                 <h4>24 Hour High</h4>
                                 {coin.market_data?.high_24h ? <p>${coin.market_data.high_24h.usd.toLocaleString()}</p> : null}                            </div>
-
+                            <div />
                         </div>
                         <div className='right'>
                             <div className='row'>
@@ -113,4 +112,4 @@ const Coin = () => {
     )
 }
 
-export default Coin
+export default Coin;

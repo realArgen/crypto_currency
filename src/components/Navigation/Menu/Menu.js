@@ -19,17 +19,17 @@ const Menu = prop => {
                     <ul className="menu__ul">
 
                         <li>
-                            <Link to='/' className='nav-item' onClick={prop.remove}>Home</Link>
+                            <Link to='/' className='nav-item'>Home</Link>
                         </li>
                         <li>
-                            <Link to='/featured' className='nav-item' onClick={prop.remove}>Featured</Link>
+                            <Link to='/featured' className='nav-item'>Featured</Link>
                         </li>
                         <li>
-                            <Link to='/hero' className='nav-item' onClick={prop.remove}>Earn</Link>
+                            <Link to='/hero' className='nav-item'>Earn</Link>
 
                         </li>
                         <li>
-                            <Link to='/signup' className='nav-item' onClick={prop.remove}>Signup</Link>
+                            <Link to='/signup' className='nav-item'>Signup</Link>
                         </li>
                     </ul>
                     <div className="menu__toggle-button">

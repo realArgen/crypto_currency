@@ -9,6 +9,9 @@
     border-radius: 8px;
     color: #fff;
 }
+.coin-container{
+    margin-top: 60px;
+}
 
 .content a{
     text-decoration: none;
@@ -78,7 +81,7 @@ th {
 }
 
 .stats .row p:first-child {
-    color: #d3d3d3;
+    color: #c45454;
 }
 
 .about h3 {

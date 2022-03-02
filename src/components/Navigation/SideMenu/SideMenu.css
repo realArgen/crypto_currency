@@ -25,13 +25,6 @@
     padding: 0;
 }
 
-.side-menu .sideMenu__ul img {
-    border: 0.5px solid #848484d1;
-    border-right: none;
-    border-left: none;
-    border-top: none;
-}
-
 .side-menu .sideMenu__ul li {
     margin: 0;
     border: 0.5px solid #848484d1;
