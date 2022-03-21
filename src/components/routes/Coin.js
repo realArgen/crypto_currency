@@ -2,7 +2,124 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import DOMPurify from 'dompurify';
-import './Coin.css';
+import styled from 'styled-components';
+
+
+const Styles = styled.div`
+.coin-container .content {
+    max-width: 740px;
+    margin: 1rem auto;
+    padding: .7rem 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #132055;
+    box-shadow: 0px 0px 12px #18191b;
+    border-radius: 8px;
+    color: #fff;
+}
+.coin-container{
+    margin-top: 60px;
+}
+
+.content a{
+    text-decoration: none;
+    color: rgb(0, 207, 0);
+}
+
+
+.rank {
+    margin: .5 0;
+}
+
+.rank-btn {
+    border: 1px solid #6900ff;
+    box-shadow: 0px 0px 8px #6900ff;
+    background-color: #6900ff;
+    border-radius: 8px;
+    padding: .2rem;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.info .coin-heading {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.info .coin-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info p {
+    padding-right: 1rem;
+}
+
+table {
+    margin: .5rem 0;
+}
+
+td, th {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(68, 125, 172);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    width: 100%;
+}
+
+.stats .row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #808080;
+    margin: .6rem 0;
+    padding-bottom: .5rem;
+}
+
+.stats .row p:first-child {
+    color: #c45454;
+}
+
+.about h3 {
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 700px) {
+    .coin-container .content {
+        max-width: 100%;
+        margin: .5rem;
+        padding: 0 .5rem;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    td,th {
+        padding: 3px;
+    }
+
+    .rank {
+        margin: .5rem;
+    }
+
+    .rank-btn {
+        margin: .5rem 0;
+    }
+}
+`
 
 const Coin = () => {
 
@@ -22,7 +139,7 @@ const Coin = () => {
 
 
     return (
-        <div>
+        <Styles>
             <div className='coin-container'>
                 <div className='content'>
                     <h1>{coin.name}</h1>
@@ -108,7 +225,7 @@ const Coin = () => {
                 </div>
 
             </div>
-        </div>
+        </Styles>
     )
 }
 
