@@ -163,28 +163,16 @@ const Styles = styled.div`
 }
 `
 
-const Featured = () => {
+const Featured = (prop) => {
 
-    const [data, setData] = useState(null)
-    const [show, setShow] = useState(false)
-
-    const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false'
-
-    useEffect(() => {
-        axios.get(url).then((response) => {
-            setData(response.data)
-        }).catch((error) => {
-            console.log(error)
-        })
-    }, [])
+    const [show, setShow] = useState(false);
 
     const showMore = () => {
-        setShow(!show)
+        setShow(!show);
     }
 
-    // console.log(data)
 
-    if (!data) return null
+    if (!prop.data) return null;
 
     return (
         <Styles>
@@ -202,7 +190,7 @@ const Featured = () => {
 
                     <div className='right'>
 
-                        {data.filter((card, idx) => idx < 6).map(item => (
+                        {prop.data.filter((card, idx) => idx < 6).map(item => (
 
                             <div className='card'>
                                 <div className='top'>
@@ -235,7 +223,7 @@ const Featured = () => {
                     <div className="coins">
 
                         {show ?
-                            data.map(item => (
+                            prop.data.map(item => (
                                 <div className='card'>
                                     <div className='top'>
                                         <img src={item.image} alt='/' />

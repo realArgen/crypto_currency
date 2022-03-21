@@ -28,7 +28,7 @@ const App = () => {
 
   const [coins, setCoins] = useState([]);
 
-  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false`
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`
 
   useEffect(() => {
     axios.get(url).then((response) => {
@@ -46,9 +46,8 @@ const App = () => {
         <Route path='/coin' element={<Coin />}>
           <Route path=':coinId' element={<Coin />} />
         </Route>
-        <Route path='/featured' element={<Featured />} />
+        <Route path='/featured' element={<Featured data={coins} />} />
         <Route path='/hero' element={<Hero />} />
-        <Route path='/featured' element={<Featured />} />
         <Route path='/signup' element={<Signup />} />
       </Routes>
 

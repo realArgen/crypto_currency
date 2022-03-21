@@ -34,4 +34,4 @@ const Coins = (props) => {
     )
 }
 
-export default Coins
+export default Coins;
